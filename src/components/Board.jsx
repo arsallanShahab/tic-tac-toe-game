@@ -1,22 +1,23 @@
 import React from 'react';
+import Square from './Square';
 
 const Board = () => {
   return (
     <div>
       <div>
-        <button></button>
-        <button></button>
-        <button></button>
+        <Square />
+        <Square />
+        <Square />
       </div>
       <div>
-        <button></button>
-        <button></button>
-        <button></button>
+        <Square />
+        <Square />
+        <Square />
       </div>
       <div>
-        <button></button>
-        <button></button>
-        <button></button>
+        <Square />
+        <Square />
+        <Square />
       </div>
     </div>
   );
