@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --font-fredoka: 'Fredoka', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-poppins);
+    font-weight: normal;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    outline: none;
+    &:hover {
+     cursor: pointer;
+    }
+  }
+  
+.app {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .heading {
+        font-size: 3em;
+        font-family: var(--font-fredoka);
+        font-weight: 700;
+    }
+}
+  
+.board {
+    .board-row {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 2px solid #000;
+      &:last-child {
+        border-bottom: none;
+      }
+      .square {
+        width: 80px;
+        height: 80px;
+        border-right: 2px solid #000;
+        font-size: 2.5rem;
+        padding: 0;
+        overflow: hidden;
+        transition: all 0.2s;
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+  

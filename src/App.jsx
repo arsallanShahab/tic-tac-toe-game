@@ -3,7 +3,7 @@ import Board from './components/Board';
 import './styles/root.scss';
 
 const App = () => (
-  <div>
+  <div className="app">
     <h1 class="heading">Tic Tac Toe </h1>
     <Board />
   </div>
