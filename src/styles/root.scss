@@ -23,29 +23,45 @@ body {
   }
   
 .app {
+    background-color: #141E27;
+    // background-image: -webkit-linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    // background-image: -moz-linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    // background-image: -o-linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    // background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    // min-height: 100vh;
+    // max-height: 670px;
+
     font-size: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #fff;
+    padding: 1.5em;
     .heading {
+        padding:0;
+        margin: 0;
+        padding-top: 1.25em;
         font-size: 3em;
         font-family: var(--font-fredoka);
         font-weight: 700;
+        color: #EEEDDE;
     }
 }
   
 .board {
+    padding-top: 1.5em;
     .board-row {
       display: flex;
       flex-direction: row;
-      border-bottom: 2px solid #000;
+      border-bottom: 2px solid #fff;
       &:last-child {
         border-bottom: none;
       }
       .square {
+        color: #fff;
         width: 80px;
         height: 80px;
-        border-right: 2px solid #000;
+        border-right: 2px solid #fff;
         font-size: 2.5rem;
         padding: 0;
         overflow: hidden;
