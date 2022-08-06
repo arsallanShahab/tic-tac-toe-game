@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const App = () => (
-  <>
-    <h1>Welcome to React Vite Micro App!</h1>
-    <p>Hard to get more minimal than this React app.</p>
-    <p>creating my tic tac toe app</p>
-  </>
+  <div>
+    <h1 class="heading">Tic Tac Toe </h1>
+  </div>
 );
 
 export default App;
