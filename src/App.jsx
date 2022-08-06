@@ -4,7 +4,7 @@ import './styles/root.scss';
 
 const App = () => (
   <div className="app">
-    <h1 class="heading">Tic Tac Toe </h1>
+    <h1 className="heading">Tic Tac Toe </h1>
     <Board />
   </div>
 );
