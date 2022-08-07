@@ -27,6 +27,7 @@ const App = () => {
   return (
     <div className="app">
       <h1 className="heading">Tic Tac Toe </h1>
+      <h2>message</h2>
       <Board board={board} handleSquareClick={handleSquareClick} />
     </div>
   );
