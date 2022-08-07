@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Board from './components/Board';
-import calculateWinner from './Helpers';
+import Histroy from './components/Histroy';
+import calculateWinner from './helpers';
 import './styles/root.scss';
 
 const App = () => {
@@ -35,11 +36,16 @@ const App = () => {
     setCurrentMove(prev => prev + 1);
   };
 
+  const moveTo = move => {
+    setCurrentMove(move);
+  };
+
   return (
     <div className="app">
       <h1 className="heading">Tic Tac Toe </h1>
       <h2>{message}</h2>
       <Board board={current.board} handleSquareClick={handleSquareClick} />
+      <Histroy histroy={histroy} moveTo={moveTo} currentMove={currentMove} />
     </div>
   );
 };

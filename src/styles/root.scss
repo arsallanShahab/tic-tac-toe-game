@@ -56,6 +56,11 @@ body {
       color: #fff;
       border-radius: 99px;
     }
+    ul {
+      li {
+        font-family: var(--font-poppins);
+      }
+    }
 }
   
 .board {
