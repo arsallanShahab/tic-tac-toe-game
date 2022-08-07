@@ -42,10 +42,34 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1 className="heading">Tic Tac Toe </h1>
-      <h2>{message}</h2>
-      <Board board={current.board} handleSquareClick={handleSquareClick} />
-      <Histroy histroy={histroy} moveTo={moveTo} currentMove={currentMove} />
+      <div className="flex-row">
+        <div>
+          <h1 className="heading">
+            <span>T</span>
+            <span>I</span>
+            <span>C</span>
+            <span>.</span>
+            <span>T</span>
+            <span>A</span>
+            <span>C</span>
+            <span>.</span>
+          </h1>
+        </div>
+        <div>
+          <h1 className="heading">
+            <span>T</span>
+            <span>O</span>
+            <span>E</span>
+          </h1>
+        </div>
+      </div>
+      <div className="container">
+        <h2>{message}</h2>
+        <Board board={current.board} handleSquareClick={handleSquareClick} />
+      </div>
+      <div className="overflow">
+        <Histroy histroy={histroy} moveTo={moveTo} currentMove={currentMove} />
+      </div>
     </div>
   );
 };
