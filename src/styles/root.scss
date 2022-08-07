@@ -40,15 +40,21 @@ body {
         padding:0;
         margin: 0;
         padding-top: 1em;
+        padding-bottom: .5em;
         font-size: 3em;
         font-family: var(--font-fredoka);
         font-weight: 700;
         color: #311D3F;
     }
     h2 {
+      display: inline-block;
+      background: #311D3F;
       margin:0;
       padding:0;
-      padding-top: 1em;
+      font-size: 1em;
+      padding: .65em 1.25em;
+      color: #fff;
+      border-radius: 99px;
     }
 }
   
