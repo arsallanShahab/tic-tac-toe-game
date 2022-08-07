@@ -11,8 +11,6 @@ const App = () => {
   const [currentMove, setCurrentMove] = useState(0);
   const current = histroy[currentMove];
 
-  console.log(histroy);
-
   const winner = calculateWinner(current.board);
   const message = winner
     ? `The winner is ${winner}`
