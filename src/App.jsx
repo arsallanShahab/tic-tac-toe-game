@@ -5,15 +5,15 @@ import calculateWinner from './helpers';
 import StatusMessage from './components/StatusMessage';
 import './styles/root.scss';
 
+const INITIAL_GAME_DATA = [{ board: Array(9).fill(null), isNext: true }];
+
 const App = () => {
-  const [histroy, setHistroy] = useState([
-    { board: Array(9).fill(null), isNext: true },
-  ]);
+  const [histroy, setHistroy] = useState(INITIAL_GAME_DATA);
 
   const [currentMove, setCurrentMove] = useState(0);
   const current = histroy[currentMove];
 
-  const winner = calculateWinner(current.board);
+  const { winner, winningSquare } = calculateWinner(current.board);
 
   const handleSquareClick = position => {
     if (current.board[position] || winner) {
@@ -36,6 +36,11 @@ const App = () => {
 
   const moveTo = move => {
     setCurrentMove(move);
+  };
+
+  const newGame = () => {
+    setHistroy(INITIAL_GAME_DATA);
+    setCurrentMove(0);
   };
 
   return (
@@ -63,7 +68,14 @@ const App = () => {
       </div>
       <div className="container">
         <StatusMessage winner={winner} current={current} />
-        <Board board={current.board} handleSquareClick={handleSquareClick} />
+        <Board
+          board={current.board}
+          handleSquareClick={handleSquareClick}
+          winningSquare={winningSquare}
+        />
+        <button type="button" onClick={newGame} className="start-new-game">
+          NEW GAME
+        </button>
       </div>
       <div className="overflow">
         <Histroy histroy={histroy} moveTo={moveTo} currentMove={currentMove} />

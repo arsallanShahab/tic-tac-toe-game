@@ -1,9 +1,6 @@
 import React from 'react';
 
 const StatusMessage = ({ winner, current }) => {
-  // const message = winner
-  // ? `The winner is ${winner}`
-  // : `The next player is  ${current.isNext ? 'X' : 'O'}`
   const noMovesLeft = current.board.every(el => {
     return el != null;
   });
