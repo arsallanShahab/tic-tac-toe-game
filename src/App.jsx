@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Board from './components/Board';
 import Histroy from './components/Histroy';
 import calculateWinner from './helpers';
+import StatusMessage from './components/StatusMessage';
 import './styles/root.scss';
 
 const App = () => {
@@ -13,9 +14,6 @@ const App = () => {
   const current = histroy[currentMove];
 
   const winner = calculateWinner(current.board);
-  const message = winner
-    ? `The winner is ${winner}`
-    : `The next player is  ${current.isNext ? 'X' : 'O'}`;
 
   const handleSquareClick = position => {
     if (current.board[position] || winner) {
@@ -64,7 +62,7 @@ const App = () => {
         </div>
       </div>
       <div className="container">
-        <h2>{message}</h2>
+        <StatusMessage winner={winner} current={current} />
         <Board board={current.board} handleSquareClick={handleSquareClick} />
       </div>
       <div className="overflow">
