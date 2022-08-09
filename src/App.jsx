@@ -73,9 +73,18 @@ const App = () => {
           handleSquareClick={handleSquareClick}
           winningSquare={winningSquare}
         />
-        <button type="button" onClick={newGame} className="start-new-game">
-          NEW GAME
-        </button>
+
+        {INITIAL_GAME_DATA !== histroy ? (
+          <button
+            type="button"
+            onClick={newGame}
+            className={`start-new-game ${winner ? 'active' : ''}`}
+          >
+            NEW GAME
+          </button>
+        ) : (
+          <></>
+        )}
       </div>
       <div className="overflow">
         <Histroy histroy={histroy} moveTo={moveTo} currentMove={currentMove} />

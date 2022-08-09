@@ -8,6 +8,7 @@
   --font-rubik: 'Rubik', sans-serif;
 }
 
+
 body {
   padding: 0;
   margin: 0;
@@ -23,6 +24,14 @@ button {
   &:hover {
     cursor: pointer;
   }
+}
+
+.x-class {
+  color: #038341 !important;
+}
+
+.o-class {
+  color: #5d1fa8 !important;
 }
 
 .app {
@@ -101,6 +110,12 @@ button {
   color: #fff;
   font-family: var(--font-rubik);
   border-radius: 99px;
+  transition: 150ms ease;
+
+  &.active {
+    transform: scale(1.2);
+    color: #FEB139;
+  }
 }
 
 .flex-row {
@@ -116,7 +131,8 @@ button {
 ol {
   position: relative;
   list-style-type: none;
-  padding: 2em 4em;
+  padding: 0;
+  margin: 0;
 
   .histroyBtn {
     position: relative;
@@ -180,10 +196,22 @@ ol {
 .overflow {
   position: relative;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   overflow-y: scroll;
+
+  .wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2em 4em;
+  }
+
+  .game-histroy {
+    font-weight: 800;
+    font-family: va(--font-rubik);
+    color: #311D3F;
+  }
 }
 
 
@@ -241,7 +269,6 @@ ol {
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #fff;
       font-family: var(--font-fredoka);
       font-weight: 500;
       width: 100px;
@@ -250,6 +277,26 @@ ol {
       font-size: 2.5rem;
       padding: 0;
       transition: all 150ms;
+
+      &.winning {
+        font-weight: 700;
+        color: #311D3F !important;
+        animation: scaleText 1s infinite;
+
+        @keyframes scaleText {
+          0% {
+            transform: 2.5rem;
+          }
+
+          50% {
+            font-size: 3.25rem;
+          }
+
+          100% {
+            font-size: 2.5rem;
+          }
+        }
+      }
 
       &::before {
         content: '';
